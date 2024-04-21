@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="icon" href="https://th.bing.com/th/id/R.1572478ab33a77b771d66e52ee79d19b?rik=RIiYXRqzdd6Lpg&riu=http%3a%2f%2fwww.freepcdownload.net%2fwp-content%2fuploads%2f2017%2f03%2ffbyn54c0LEUt59-YyYXZmrMUCkk8A3xD8YYQn8Tj_ZsnQ-yC8k5fwzUFB05UL_WO8l8w300-012925.png&ehk=AImOIpmfWmFny4%2fCzj6VQMMnWh0TnnmqNxOioA0S8Ls%3d&risl=&pid=ImgRaw&r=0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,700,1,200" /> 
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body id="BodyColor">
+    <div class="conatiner-fluid">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 main-container" id="MainContainer">
+                <div class="PlayModePage" id="PlayerModePage">
+                    <div class="BackGroundGameLogo">
+                        <img src="images/R-removebg-preview.png" alt="Tic-Tac-Toe" class="Blur">
+                    </div>
+                    <div class="GameNameHeading">
+                        <h1>Tic-Tac-Toe Game</h1>
+                    </div>
+                    <div class="ModeSelectBlock">
+                        <div class="PlayerVsPlayer" id="PlayerVsPlayer">
+                            <p>PLAYER 1</p>
+                            <p>VS</p>
+                            <p>PLAYER 2</p>
+                        </div>
+                        <div class="PlayerVsComputer" id="PlayerVsComputer">
+                            <p>PLAYER 1</p>
+                            <p>VS</p>
+                            <p>COMPUTER</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info-main-container hide" id="MainInfoDetail">
+                    <div class="info-detail" id="InfoDetail">
+                        <div class="infocancel">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </div>
+                        <div class="infocontent">
+                            <p>
+                                <h2>Welcome to Tic Tac Toe Game</h2>
+                                How to play: players take turns to place their marks in an attempt to get a continuous line of 3 cells.<br><br>
+                                Purpose: for players to place their 3 allotted marks (X or O) in a continuous line, vertically, horizontally, or diagonally.<br><br>
+                                Rules: each player chooses a mark and takes turns to place them on the grid. The game is over when a player gets a continuous line of 3, or the 9-square grid is full.<br><br>                       
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="WinnerScreenMainBlock hide" id="WinnerScreen">
+                    <div class="WinnerScreenBlock">
+                        <p class="WhoWin" id="WhoWin"></p>
+                        <div class="TakesRoundBlock">
+                            <div class="TakesRoundIcon" id="WinIcon">
+    
+                            </div>
+                            <div class="TakesRoundText" id="WinBlockText">
+                                <h2 id="TakesRoundOrTieText"></h2>
+                            </div>
+                        </div>
+                        <div class="AfterMatchButton">
+                            <div class="quit" id="Quit">
+                                QUIT
+                            </div>
+                            <div class="NextRound" id="NextRound">
+                                NEXT ROUND
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Gamepage">
+                    <div class="IconDiv">
+                        <span class="material-symbols-outlined info" id="InfoButton">
+                            info
+                        </span>
+                    </div>
+                    <div class="GameHead">
+                        <div class="xo">
+                            <span class="material-symbols-outlined close" id="HeadXIcon">
+                                close
+                            </span>
+                            <span class="material-symbols-outlined circle" id="HeadOIcon">
+                                trip_origin
+                            </span>
+                        </div>
+                        <div class="turn" id="TurnBoxColor">
+                            <!-- <p> -->
+                                <span class="material-symbols-outlined" id="TurnIconChange">
+                                    close
+                                </span>
+                                TURN
+                            <!-- </p> -->
+                        </div>
+                        <div class="restart" id="RefreshBox">
+                            <span class="material-symbols-outlined">
+                                refresh
+                            </span>
+                        </div>
+                    </div>
+                    <div class="Game-container">
+                        <div class="GameFront">
+                            <div class="fbox" id="fb1"></div>
+                            <div class="fbox" id="fb2"></div>
+                            <div class="fbox" id="fb3"></div>
+                            <div class="fbox" id="fb4"></div>
+                            <div class="fbox" id="fb5"></div>
+                            <div class="fbox" id="fb6"></div>
+                            <div class="fbox" id="fb7"></div>
+                            <div class="fbox" id="fb8"></div>
+                            <div class="fbox" id="fb9"></div>
+                        </div>
+                        <div class="GameBack">
+                            <div class="box b1" id="b1">
+                                <!-- <span class="material-symbols-outlined"id="XSymbol">
+                                    close
+                                </span> -->
+                            </div>
+                            <div class="box b2" id="b2">
+                                <!-- <span class="material-symbols-outlined" id="OSymbol">
+                                    trip_origin
+                                </span> -->
+                            </div>
+                            <div class="box b3" id="b3"></div>
+                            <div class="box b4" id="b4"></div>
+                            <div class="box b5" id="b5"></div>
+                            <div class="box b6" id="b6"></div>
+                            <div class="box b7" id="b7"></div>
+                            <div class="box b8" id="b8"></div>
+                            <div class="box b9" id="b9"></div>
+                        </div>
+                    </div>
+                    <div class="GameFoot">
+                        <div class="X bt" id="XBoxColor">
+                            <p>X WIN's</p>
+                            <p id="XWinCount">0</p>
+                        </div>
+                        <div class="Ties bt" id="TiesBoxColor">
+                            <p>TIES</p>
+                            <p id="TieCount">0</p>
+                        </div>
+                        <div class="O bt" id="OBoxColor">
+                            <p id="ComputerOrO">O WIN's</p>
+                            <p id="OWinCount">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
