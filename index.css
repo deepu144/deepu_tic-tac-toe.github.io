@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+body{
+    background-color:#192A32;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlayModePage{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0b0c10;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BackGroundGameLogo{
+    display: grid;
+    /* place-content: center; */
+    position: absolute;
+    /* border: 1px solid yellow; */
+    height: 80vh;
+    width: 75vh;
+    bottom: 70px;
+}
+
+.Blur{
+    position: relative;
+    filter: blur(4px);
+    /* outline: 1px solid red; */
+    animation: imgupdown 5s ease-in-out infinite;
+}
+
+@keyframes imgupdown{
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+
+}
+
+.GameNameHeading{
+    display: grid;
+    place-content: center;
+    color: #9daaf2ec;
+    font-size: clamp(10px,4vw,35px);
+    position: relative;
+    top: 100px;
+    font-family: 'Rock Salt', cursive;
+}
+
+.ModeSelectBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    position: relative;
+    top: 100px;
+}
+
+.PlayerVsPlayer,.PlayerVsComputer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 250px;
+    border: 1px solid #31C4BE;
+    /* background-color: red; */
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.PlayerVsPlayer :nth-child(1),.PlayerVsComputer :nth-child(1){
+    color: white;
+    margin: 0% 3px;
+}
+
+.PlayerVsPlayer :nth-child(2),.PlayerVsComputer :nth-child(2){
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;    
+    font-weight: bolder;
+    color:#F2B237 ;
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+.PlayerVsPlayer :nth-child(3),.PlayerVsComputer :nth-child(3){
+    color: white;
+    margin: 0% 5px;
+}
+
+.PlayerVsComputer:hover,.PlayerVsPlayer:hover{
+    background-color: #31c4bf4a;
+}
+
+.Gamepage{
+    height: 550px;
+    position: absolute;
+    width: 350px;
+}
+
+.IconDiv{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.info{
+    height: 25px;
+    color: #A8BEC9;
+    cursor: pointer;
+}
+
+.GameHead{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close{
+    color:#31C4BE;
+    text-shadow: 1px 1px 3px #31C4BE,-1px -1px 3px #31C4BE;
+}
+
+.circle{
+    color: #F2B237;
+    text-shadow: 1px 1px 3px #F2B237,-1px -1px 3px #F2B237;
+}
+
+.xo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.turn{
+    background-color: #1F3540;
+    border-radius: 10px;
+    box-shadow: 0px 4px #102129;
+    width: 90px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: rgba(206, 207, 208, 0.785);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.restart{
+    height: 30px;
+    width: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    background-color:#A8BEC9;
+    box-shadow: 0px 3px #6C8997;
+    color: #1F3540;
+    cursor: pointer;
+}
+
+.xo :first-child{
+    font-size: 32px;
+} 
+
+.xo :nth-child(2){
+    font-size: 26px;
+}
+
+.GameBack{
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.GameFront{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    z-index: 10;
+}
+
+.fbox{
+    border-radius: 15px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+}
+
+.box{
+    background-color: #1F3540;
+    border-radius: 15px;
+    box-shadow: 0px 5px #102129;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+
+.GameFoot{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.bt p{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.bt :nth-child(2){
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.X{
+    height: 45px;
+    width: 85px;
+    background-color: #31C4BE;
+    box-shadow: 0px 0px 2px #31C4BE,0px 0px 2px #31C4BE;
+}
+
+.Ties{
+    height: 45px;
+    width: 75px;
+    background-color: #A8BEC9;
+    box-shadow: 0px 0px 2px #A8BEC9,0px 0px 2px #A8BEC9;
+}
+
+.O{
+    height: 45px;
+    width: 85px;
+    background-color: #F2B237;
+    box-shadow: 0px 0px 2px #F2B237,0px 0px 2px #F2B237;
+}
+
+#XSymbol1,#XSymbol2,#XSymbol3,#XSymbol4,#XSymbol5,#XSymbol6,#XSymbol7,#XSymbol8,#XSymbol9{
+    font-size: 70px;
+    color: #31C4BE;
+}
+
+#OSymbol1,#OSymbol2,#OSymbol3,#OSymbol4,#OSymbol5,#OSymbol6,#OSymbol7,#OSymbol8,#OSymbol9{
+    font-size: 65px;
+    color: #F2B237;
+}
+
+.info-main-container{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+}
+
+.info-detail{
+    z-index: 2;
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    color:#102129;
+    background-color: #a8bec9c0;
+}
+
+.infocancel{
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.infocancel span{
+    color:#102129;
+    cursor: pointer;
+}
+
+.infocancel span:hover{
+    transform: scale(1.2);
+    text-shadow: 0px 0px 2px #1F3540,0px 0px 2px #1F3540;
+}
+
+.infocontent{
+    position: relative;
+    bottom: 20px;
+}
+
+.WinnerScreenMainBlock{
+    position: absolute;
+    z-index: 14;
+    width: 100vw;
+    height: 560px;
+    display: grid;
+    place-content: center;
+}
+
+.WinnerScreenBlock{
+    z-index: 15;
+    width: 100vw;
+    height: 180px;
+    background-color: #1f3540;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: animate 0.2s linear 0s 1 backwards;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0.1);
+        background-color: #1f354048;
+    }
+    50%{
+        transform: scale(0.5);
+        background-color: #1f35406a;
+    }
+    80%{
+        transform: scale(1.4);
+        background-color: #1f3540a9;
+    }
+    100%{
+        transform: scale(1.0);
+        background-color: #1f3540;
+    }
+
+}
+
+.AfterMatchButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+}
+
+.TakesRoundText{
+    color: #A8BEC9;
+}
+
+.TakesRoundBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.TakesRoundIcon{
+    margin-right: 10px;
+}
+
+.quit{
+    background-color: #A8BEC9;
+    border-radius: 5px;
+    box-shadow: 0px 3px #6B8997;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.NextRound{
+    background-color: #F2B237;
+    border-radius: 5px;
+    box-shadow: 0px 3px #BE8417;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.WhoWin{
+    color: #A8BEC9;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.hide{
+    display: none;
+}
+
+.opacity{
+    opacity: 0.4;
+}
+
+.XOwinColor{
+    color: #1F3540;
+}
+
+.WinColorX{
+    color: #31C4BE;
+}
+
+.WinColorO{
+    color: #F2B237;
+}
